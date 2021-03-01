@@ -82,10 +82,10 @@ export default {
       this.previousState.push(JSON.stringify(this.card))
     },
     addAdditionalField () {
-      const defaultdAdditionalField = { name: 'Наименоватикус', value: 'Полетикус' }
+      const defaultAdditionalField = { name: 'название поля', value: 'информация' }
       this.saveToHistory()
-      if (this.card.additional) { return this.card.additional.push(defaultdAdditionalField) }
-      this.$set(this.card, 'additional', [defaultdAdditionalField])
+      if (this.card.additional) { return this.card.additional.push(defaultAdditionalField) }
+      this.$set(this.card, 'additional', [defaultAdditionalField])
     },
     revert () {
       if (!this.previousState.length) { return }
